@@ -90,7 +90,8 @@ a.signup_button {
   text-align: center;
   width: 120px;
   color: #fff;
-  background: #DB6200;
+  /*background: #DB6200;*/
+  background: #007ED8;
   font-size: 100%;
   font-weight: bold;
   padding: 10px;
