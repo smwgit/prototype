@@ -1,7 +1,7 @@
 module ApplicationHelper
   
   def title
-    base_title = "Ruby on Rails Tutorial Sample App"
+    base_title = "FGStream RNA-seq Database Prototype"
     if @title.nil?
       base_title
     else
@@ -10,6 +10,6 @@ module ApplicationHelper
   end
   
   def logo
-    image_tag("logo.png", :alt => "Sample App", :class => "round", :size => 10)
+    image_tag("logo.png", :alt => "The Functional Genomics Research Stream", :class => "round", :size => 10)
   end
 end

@@ -2,8 +2,8 @@
   <table class="front" summary="For signed-in users">
     <tr>
       <td class="main">
-        <h1 class="micropost">What's your data?</h1>
-        <%= render 'shared/micropost_form' %>
+        <h1 class="dataset">What's your data?</h1>
+        <%= render 'shared/dataset_form' %>
         <%= render 'shared/feed' %>
       </td>
       <td class="sidebar round">
@@ -12,12 +12,10 @@
     </tr>
   </table>
 <% else %>
-  <h1>Sample App</h1>
+  <h1>Prototype</h1>
 
   <p>
-    This is the home page for the
-    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-    sample application.
+    The home page for the future <a href="http://fg.cns.utexas.edu/">FGStream</a> RNA-seq information database.
   </p>
 
   <%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>

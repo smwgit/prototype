@@ -1,0 +1,91 @@
+<%= form_for @dataset do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  <div class="field">
+    <!--<%= f.label :user_id, "User ID" %><br />-->
+    <!--<%= f.text_field :user_id %><br />-->
+    
+    <%= f.label :person %><br />
+    <%= f.text_field :person %><br />
+    
+    <%= f.label :sample %><br />
+    <%= f.text_field :sample %><br />
+    
+    <%= f.label :replicate %><br />
+    <%= f.text_field :replicate %><br />
+    
+          
+    <%= f.label :cellType, "Cell Type" %><br />
+    <%= f.text_field :cellType %><br />
+    
+    <%= f.label :factor %><br />
+    <%= f.text_field :factor %><br />
+    <br /><br />
+          
+    <%= f.label :numReads, "Number of Reads" %><br />
+    <%= f.text_field :numReads %><br />
+    
+    <%= f.label :mappedReads, "Mapped Reads" %><br />
+    <%= f.text_field :mappedReads %><br />
+    
+    <%= f.label :unmappedReads, "Unmapped Reads" %><br />
+    <%= f.text_field :unmappedReads %><br />
+    
+    <%= f.label :averageCPL, "Average CPL" %><br />
+    <%= f.text_field :averageCPL %><br />
+    
+    <%= f.label :medianCPL, "Median CPL" %><br />
+    <%= f.text_field :medianCPL %><br />
+    
+    <%= f.label :minCPL, "Min CPL" %><br />
+    <%= f.text_field :minCPL %><br />
+    
+    <%= f.label :maxCPL, "Max CPL" %><br />
+    <%= f.text_field :maxCPL %><br />
+    <br /><br />
+          
+    <%= f.label :aligner %><br />
+    <%= f.text_field :aligner %><br />
+    
+    <%= f.label :system %><br />
+    <%= f.text_field :system %><br />
+    
+    <%= f.label :alignParams, "Alignment Parameters" %><br />
+    <%= f.text_field :alignParams %><br />
+    
+    <%= f.label :refGenome, "Reference Genome" %><br />
+    <%= f.text_field :refGenome %><br />
+    
+    <%= f.label :files, "List of Files" %><br />
+    <%= f.text_area :files %><br />
+    <br />
+          
+    <%= f.label :sequencer %><br />
+    <%= f.text_field :sequencer %><br />
+    
+    <%= f.label :jobid, "Job ID" %><br />
+    <%= f.text_field :jobid %><br />
+    
+    <%= f.label :barcode %><br />
+    <%= f.text_field :barcode %><br />
+    
+    <%= f.label :dateDone, "Date of sample" %><br />
+    <%= date_select :dataset, :dateDone %><br />
+
+    <%= f.label :dateRec, "Date received" %><br />
+    <%= date_select :dataset, :dateRec %><br />
+    
+    <%= f.label :lanes %><br />
+    <%= f.text_field :lanes %><br />
+    <br /><br />
+          
+    <%= f.label :comments %><br />
+    <%= f.text_area :comments %><br />
+    
+    <%= f.label :otherInfo, "Other info" %><br />
+    <%= f.text_area :otherInfo %><br />
+  </div>
+  
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>

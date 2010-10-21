@@ -1,0 +1,33 @@
+      t.integer :user_id
+      t.string :person
+      t.string :sample
+      t.string :replicate
+      
+      t.string :cellType
+      t.string :factor
+      
+      t.integer :numReads
+      t.integer :mappedReads
+      t.integer :unmappedReads
+      t.decimal :averageCPL
+      t.decimal :medianCPL
+      t.decimal :minCPL
+      t.decimal :maxCPL
+      
+      t.string :aligner
+      t.string :system
+      t.string :alignParams
+      t.string :refGenome
+      t.text :files
+      
+      t.string :sequencer
+      t.string :jobid
+      t.string :barcode
+      t.date :dateDone
+      t.date :dateRec
+      t.decimal :lanes
+      
+      t.text :comments
+      t.string :otherInfo
+      
+      t.timestamps

@@ -10,7 +10,40 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101004210754) do
+ActiveRecord::Schema.define(:version => 20101008151015) do
+
+  create_table "datasets", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "person"
+    t.string   "sample"
+    t.string   "replicate"
+    t.string   "cellType"
+    t.string   "factor"
+    t.integer  "numReads"
+    t.integer  "mappedReads"
+    t.integer  "unmappedReads"
+    t.decimal  "averageCPL"
+    t.decimal  "medianCPL"
+    t.decimal  "minCPL"
+    t.decimal  "maxCPL"
+    t.string   "aligner"
+    t.string   "system"
+    t.string   "alignParams"
+    t.string   "refGenome"
+    t.text     "files"
+    t.string   "sequencer"
+    t.string   "jobid"
+    t.string   "barcode"
+    t.date     "dateDone"
+    t.date     "dateRec"
+    t.string   "lanes"
+    t.text     "comments"
+    t.string   "otherInfo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "datasets", ["user_id"], :name => "index_datasets_on_user_id"
 
   create_table "microposts", :force => true do |t|
     t.string   "content"

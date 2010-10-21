@@ -1,9 +1,12 @@
 .container {
-    width: 710px;
+    width: 1000px;
 }
 
 body {
-    background: #f78e24;
+    /*background: #f78e24;*/
+    background: #ffbf12;
+    background-image: url(../images/background.png);
+    background-repeat: repeat-x;
 }
 
 header {
@@ -85,12 +88,12 @@ a.signup_button {
   margin-right: auto;
   display: block;
   text-align: center;
-  width: 190px;
+  width: 120px;
   color: #fff;
-  background: #006400;
-  font-size: 150%;
+  background: #DB6200;
+  font-size: 100%;
   font-weight: bold;
-  padding: 20px;
+  padding: 10px;
 }
 
 /* Round corners */
@@ -120,16 +123,17 @@ table.profile {
   margin-bottom: 0;
 }
 
-td.main {
-  width: 70%;
-  padding: 1em;
-}
+/*td.main {*/
+/*  width: 70%;*/
+/*  padding: 1em;*/
+/*}*/
 
 td.sidebar {
-  width: 30%;
+  width: 18%;
   padding: 1em;
   vertical-align: top;
-  background: #ffc;
+  background: #FFFFFF;
+  border: 1px solid #999;
 }
 
 .profile img.gravatar {
@@ -190,31 +194,31 @@ ul.users {
   list-style: none;
 }
 
-h1.micropost {
+h1.dataset {
   margin-bottom: 0.3em;
 }
 
-table.microposts {
+table.datasets {
   margin-top: 1em;
 }
 
-table.microposts tr {
+table.datasets tr {
   height: 70px;
 }
 
-table.microposts tr td.gravatar {
+table.datasets tr td.gravatar {
   border-top: 1px solid #ccc;
   vertical-align: top;
   width: 50px;
 }
 
-table.microposts tr td.micropost {
+table.datasets tr td.dataset
   border-top: 1px solid #ccc;
   vertical-align: top;
   padding-top: 10px;
 }
 
-table.microposts tr td.micropost span.timestamp {
+table.datasets tr td.dataset span.timestamp {
   display: block;
   font-size: 85%;
   color: #666;
@@ -232,15 +236,15 @@ div.user_info span.user_name {
   position: absolute;
 }
 
-div.user_info span.microposts {
+div.user_info span.datasets {
   font-size: 80%;
 }
 
-form.new_micropost {
+form.new_dataset {
   margin-bottom: 2em;
 }
 
-form.new_micropost textarea {
+form.new_dataset textarea {
   height: 4em;
   margin-bottom: 0;
 }

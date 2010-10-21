@@ -1,0 +1,85 @@
+<%= f.label :user_id %><br />
+<%= f.text_field :user_id %><br />
+
+<%= f.label :person %><br />
+<%= f.text_field :person %><br />
+
+<%= f.label :sample %><br />
+<%= f.text_field :sample %><br />
+
+<%= f.label :replicate %><br />
+<%= f.text_field :replicate %><br />
+
+      
+<%= f.label :cellType %><br />
+<%= f.text_field :cellType %><br />
+
+<%= f.label :factor %><br />
+<%= f.text_field :factor %><br />
+
+      
+<%= f.label :numReads %><br />
+<%= f.text_field :numReads %><br />
+
+<%= f.label :mappedReads %><br />
+<%= f.text_field :mappedReads %><br />
+
+<%= f.label :unmappedReads %><br />
+<%= f.text_field :unmappedReads %><br />
+
+<%= f.label :averageCPL %><br />
+<%= f.text_field :averageCPL %><br />
+
+<%= f.label :medianCPL %><br />
+<%= f.text_field :medianCPL %><br />
+
+<%= f.label :minCPL %><br />
+<%= f.text_field :minCPL %><br />
+
+<%= f.label :maxCPL %><br />
+<%= f.text_field :maxCPL %><br />
+
+      
+<%= f.label :aligner %><br />
+<%= f.text_field :aligner %><br />
+
+<%= f.label :system %><br />
+<%= f.text_field :system %><br />
+
+<%= f.label :alignParams %><br />
+<%= f.text_field :alignParams %><br />
+
+<%= f.label :refGenome %><br />
+<%= f.text_field :refGenome %><br />
+
+<%= f.label :files %><br />
+<%= f.text_field :files %><br />
+
+      
+<%= f.label :sequencer %><br />
+<%= f.text_field :sequencer %><br />
+
+<%= f.label :jobid %><br />
+<%= f.text_field :jobid %><br />
+
+<%= f.label :barcode %><br />
+<%= f.text_field :barcode %><br />
+
+<%= f.label :dateDone %><br />
+<%= f.text_field :dateDone %><br />
+
+<%= f.label :dateRec %><br />
+<%= f.text_field :dateRec %><br />
+
+<%= f.label :lanes %><br />
+<%= f.text_field :lanes %><br />
+
+      
+<%= f.label :comments %><br />
+<%= f.text_field :comments %><br />
+
+<%= f.label :otherInfo %><br />
+<%= f.text_field :otherInfo %><br />
+
+      
+      t.timestamps

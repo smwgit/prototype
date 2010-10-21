@@ -1,0 +1,9 @@
+<h1> All datasets </h1>
+
+<ul class = "datasets">
+  <% @datasets.each do |dataset| %>
+    <li>
+      <%= link_to dataset.jobid, jobid %>
+    </li>
+  <% end %>
+</ul>

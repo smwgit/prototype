@@ -5,17 +5,54 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
-      <% unless @user.microposts.empty? %>
-        <table class="microposts" summary="User microposts">
-          <%= render @microposts %>
+      
+      <% unless @user.datasets.empty? %>
+        <table class="datasets" summary="User datasets">
+          <tr>
+            <th>User ID </th>
+            <th>Person </th>
+            <th>Sample </th>
+            <th>Replicate </th>
+                  
+            <th>Cell Type </th>
+            <th>Factor </th>
+                  
+            <th>Reads </th>
+            <th>Mapped </th>
+            <th>Unmapped </th>
+            <th>Avg CPL </th>
+            <th>Med CPL </th>
+            <th>Min CPL </th>
+            <th>Max CPL </th>
+                  
+            <th>Aligner </th>
+            <th>System </th>
+            <th>Params </th>
+            <th>Ref </th>
+            <th>Files </th>
+                  
+            <th>Sequencer </th>
+            <th>Job ID </th>
+            <th>Barcode </th>
+            <th>Done </th>
+            <th>Received </th>
+            <th>Lanes </th>
+                  
+            <th>Comments </th>
+            <th>Other </th>
+      
+      t.timestamps
+
+          </tr>
+          <%= render @datasets %>
         </table>
-        <%= will_paginate @microposts %>
+        <%= will_paginate @datasets %>
       <% end %>
     </td>
     <td class="sidebar round">
       <strong>Name</strong> <%= @user.name %><br />
       <strong>URL</strong> <%= link_to user_path(@user), @user %><br />
-      <strong>Microposts</strong> <%= @user.microposts.count %>
+      <strong>Datasets</strong> <%= @user.datasets.count %>
     </td>
   </tr>
 </table>
