@@ -16,6 +16,9 @@
 <!--</tr>-->
 <tr>
   <td class="dataset"
+    <span class="stuff" ><%= dataset.jobid %> </span>
+  </td>
+  <td class="dataset"
     <span class="stuff" ><%= dataset.person %> </span>
   </td>
   <td class="dataset"
@@ -37,7 +40,7 @@
     <span class="stuff"><%= dataset.mappedReads %> </span>
   </td>
   <td class="dataset"
-    <span class="stuff"><%= dataset.unMappedReads %> </span>
+    <span class="stuff"><%= dataset.unmappedReads %> </span>
   </td>
   <td class="dataset"
     <span class="stuff"><%= dataset.averageCPL %> </span>
@@ -67,6 +70,9 @@
     <span class="stuff"><%= dataset.files %> </span>
   </td>
   <td class="dataset"
+    <span class="stuff"><%= dataset.sequencer %> </span>
+  </td>
+  <td class="dataset"
     <span class="stuff"><%= dataset.barcode %> </span>
   </td>
   <td class="dataset"
@@ -83,6 +89,10 @@
   </td>
   <td class="dataset"
     <span class="stuff"><%= dataset.otherInfo %> </span>
+  </td> 
+  <td>
+    <%= link_to "delete", dataset, :method => :delete,
+                                     :confirm => "Are you sure?",
+                                     :title => dataset.jobid %>
   </td>
-
 </tr>

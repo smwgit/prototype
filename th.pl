@@ -2,14 +2,14 @@
 use strict;
 
 open (INFILE, "vars");
-open (OUTFILE, ">varTH");
+open (OUTFILE, ">varAcc");
 
 while (<INFILE>)
 {
     chomp (my $line = $_);
     
-      $line =~ s/^ +t.+ :(.+)/<th>$1 <\/th>/;
-      print OUTFILE "$line\n";
+      $line =~ s/^ +t.+ :(.+)/:$1, /;
+      print OUTFILE "$line";
 }
 
 close INFILE;

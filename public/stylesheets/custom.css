@@ -1,5 +1,8 @@
 .container {
-    width: 1000px;
+    /*width: 1000px;*/
+    width: 88%;
+    padding-left: 6%;
+    padding-right: 6%;
 }
 
 body {
@@ -124,10 +127,14 @@ table.profile {
   margin-bottom: 0;
 }
 
-/*td.main {*/
-/*  width: 70%;*/
-/*  padding: 1em;*/
-/*}*/
+div.datasetTable {
+    width: 820px;
+}
+
+td.main {
+  width: 70%;
+  padding: 1em;
+}
 
 td.sidebar {
   width: 18%;

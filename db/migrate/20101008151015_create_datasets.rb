@@ -1,6 +1,7 @@
 class CreateDatasets < ActiveRecord::Migration
   def self.up
     create_table :datasets do |t|
+      t.string :jobid
       t.integer :user_id
       t.string :person
       t.string :sample
@@ -24,7 +25,6 @@ class CreateDatasets < ActiveRecord::Migration
       t.text :files
       
       t.string :sequencer
-      t.string :jobid
       t.string :barcode
       t.date :dateDone
       t.date :dateRec

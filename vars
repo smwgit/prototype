@@ -1,3 +1,4 @@
+      t.string :jobid
       t.integer :user_id
       t.string :person
       t.string :sample
@@ -21,7 +22,6 @@
       t.text :files
       
       t.string :sequencer
-      t.string :jobid
       t.string :barcode
       t.date :dateDone
       t.date :dateRec
