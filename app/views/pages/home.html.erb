@@ -2,7 +2,8 @@
   <table class="front" summary="For signed-in users">
     <tr>
       <td class="main">
-        <h1 class="dataset">What's your data?</h1>
+        <h1 class="dataset">Enter a new dataset:</h1>
+        <br />
         <%= render 'shared/dataset_form' %>
         <%= render 'shared/feed' %>
       </td>
@@ -15,7 +16,7 @@
   <h1>Prototype</h1>
 
   <p>
-    The home page for the future <a href="http://fg.cns.utexas.edu/">FGStream</a> RNA-seq information database.
+    The home page for the future Longhorn Sequencing Database.
   </p>
 
   <%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>

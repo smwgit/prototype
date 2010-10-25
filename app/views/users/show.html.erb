@@ -6,8 +6,8 @@
         <%= @user.name %>
       </h1>
       
-      <div class="datasetTable" style = "overflow-x:scroll">  
         <% unless @user.datasets.empty? %>
+          <div class="datasetTable" style = "overflow-x:scroll">  
           <table class="datasets" summary="User datasets">
             <tr>
               <th>Job ID</th>
@@ -45,8 +45,8 @@
           </table>
           
           <%= will_paginate @datasets %>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
     </td>
     <td class="sidebar round">
       <strong>Name</strong> <%= @user.name %><br />

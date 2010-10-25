@@ -17,8 +17,8 @@ header {
 }
 
 header img {
-    padding: 1em;
-    background: #fff;
+    padding: 0px;
+    background: #000;
 }
 
 section {
@@ -208,6 +208,7 @@ h1.dataset {
 
 table.datasets {
   margin-top: 1em;
+  min-width: 400px
 }
 
 table.datasets tr {
