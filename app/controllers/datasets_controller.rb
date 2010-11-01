@@ -3,7 +3,7 @@ class DatasetsController < ApplicationController
   before_filter :authorized_user, :only => :destroy
 
   def create
-    @dataset = current_user.datasets.build(params[:dataset])
+    @dataset = datasets.build(params[:dataset])
     if @dataset.save
       flash[:success] = "Dataset created!"
       redirect_to root_path
@@ -16,6 +16,23 @@ class DatasetsController < ApplicationController
   def destroy
     @dataset.destroy
     redirect_back_or root_path
+  end
+  
+  def show
+    @dataset = Dataset.find(params[:id])
+    @title = @dataset.id
+    @showAll = true;
+  end
+  
+  def edit
+    @title = "Edit dataset"
+  end
+  
+  def index
+    @title = "All users"
+    #@datasets = Dataset.paginate(:page => params[:page])
+    @datasets = Dataset.order(params[:sort])
+    @showAll = false;
   end
   
   private

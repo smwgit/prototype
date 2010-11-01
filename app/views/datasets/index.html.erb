@@ -1,9 +1,10 @@
 <h1> All datasets </h1>
 
-<ul class = "datasets">
-  <% @datasets.each do |dataset| %>
-    <li>
-      <%= link_to dataset.jobid, jobid %>
-    </li>
-  <% end %>
+<ul>
+  <div class="datasetTable" style = "overflow-x:auto">  
+  <table class="datasets">
+    <%= render '/shared/dataset_headers' %>
+    <%= render @datasets %>
+    </table>
+  </div>
 </ul>

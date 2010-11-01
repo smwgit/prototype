@@ -257,3 +257,7 @@ form.new_dataset textarea {
   height: 4em;
   margin-bottom: 0;
 }
+
+div.datasetTable {
+    width: 1000px;
+}

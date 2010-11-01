@@ -1,0 +1,8 @@
+<h1><strong><%= @dataset.jobid %></strong></h1>
+<div class="datasetTable" style = "overflow-x:scroll">  
+  <table class="datasetsShow" summary="One dataset">
+    <%= render '/shared/dataset_headers' %>
+    <%= render @dataset %>
+  </table>
+</div>
+

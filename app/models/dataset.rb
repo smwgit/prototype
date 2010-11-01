@@ -20,7 +20,7 @@
 #
 
 class Dataset < ActiveRecord::Base
-  attr_accessible :jobid, :user_id, :person, :sample, :replicate, :cellType, :factor, :numReads, :mappedReads, :unmappedReads, :averageCPL, :medianCPL, :minCPL, :maxCPL, :aligner, :system, :alignParams, :refGenome, :files, :sequencer, :barcode, :dateDone, :dateRec, :lanes, :comments, :otherInfo
+  attr_accessible :jobid, :user_id, :person, :sample, :replicate, :cellType, :factor, :numReads, :mappedReads, :unmappedReads, :averageCPL, :medianCPL, :minCPL, :maxCPL, :aligner, :system, :alignParams, :refGenome, :files, :sequencer, :barcode, :dateDone, :dateRec, :lanes, :comments, :otherInfo, :sort
   
   belongs_to :user
   
@@ -28,9 +28,5 @@ class Dataset < ActiveRecord::Base
                       :uniqueness => { :case_sensitive => false}
   validates :user_id, :presence => true
   
-  
-  
   default_scope :order => 'datasets.created_at DESC'
-  
-  
 end

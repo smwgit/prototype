@@ -1,16 +1,10 @@
-SampleApp::Application.routes.draw do
+Prototype::Application.routes.draw do
   get "sessions/new"
 
-  resources :users
+  resources :users, :datasets
   resources :sessions, :only => [:new, :create, :destroy]
   resources :datasets, :only => [:create, :destroy]
   
-  #get "users/new"
-
-  #get "pages/home"
-  #get "pages/contact"
-  #get "pages/about"
-  #get "pages/help"
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
   match '/help',    :to => 'pages#help'

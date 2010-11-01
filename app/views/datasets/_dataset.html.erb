@@ -1,26 +1,11 @@
-<!--<tr>-->
-<!--  <td class="dataset">-->
-<!--    <span class="info">Job <%= dataset.jobid %></span>-->
-<!--    <span class="timestamp">-->
-<!--      posted <%= time_ago_in_words(dataset.created_at) %> ago.-->
-<!--    </span>-->
-<!--  </td>-->
-<!--</tr>-->
-
-<!--<tr>-->
-<!--  <th>Job ID </th>-->
-<!--  <th>Cell Type </th>-->
-<!--  <th>Factor </th>-->
-<!--  <th>Replicate </th>-->
-<!--  <th>User </th>-->
-<!--</tr>-->
 <tr>
-  <td class="dataset"; min-width: 1000px;
-    <span class="stuff" ><%= dataset.jobid %> </span>
+  <td class="dataset"
+    <span class="stuff" ><%= link_to dataset.jobid, dataset %> </span>
   </td>
   <td class="dataset"
     <span class="stuff" ><%= dataset.person %> </span>
   </td>
+  <% if @showAll %>
   <td class="dataset"
     <span class="stuff"><%= dataset.sample %> </span>
   </td>
@@ -89,7 +74,8 @@
   </td>
   <td class="dataset"
     <span class="stuff"><%= dataset.otherInfo %> </span>
-  </td> 
+  </td>
+  <% end %>
   <td>
     <%= link_to "delete", dataset, :method => :delete,
                                      :confirm => "Are you sure?",
