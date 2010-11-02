@@ -6,21 +6,14 @@
         <%= @user.name %> (<%= link_to user_path(@user), @user %>): <%= @user.datasets.count %> datasets
       </h1>
       
-        <% unless @user.datasets.empty? %>
-          <div class="datasetTable" style = "overflow-x:auto">  
+      <% unless @user.datasets.empty? %>
+        <div class="datasetTable" style = "overflow-x:auto">  
           <table class="datasets" summary="User datasets">
-            <%= render '/shared/dataset_headers' %>
+           <%= render '/shared/dataset_headers' %>
             <%= render @datasets %>
           </table>
-          
-          <%= will_paginate @datasets %>
         </div>
       <% end %>
-    </td>
-    <td class="sidebar round">
-      <strong>Name</strong> <%= @user.name %><br />
-      <strong>URL</strong> <%= link_to user_path(@user), @user %><br />
-      <strong>Datasets</strong> <%= @user.datasets.count %>
     </td>
   </tr>
 </table>
