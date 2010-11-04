@@ -17,6 +17,12 @@ module ApplicationHelper
     title ||= column.titleize
     css_class = column == sort_column ? "current #{sort_direction}" : nil
     direction = column == sort_column && sort_direction == "asc" ? "desc" : "asc"
-    link_to title, {:sort => column, :direction => direction}, {:class => css_class}
+    link_to title, {:sort => column, :direction => direction, :showAll => toggle_state}, {:class => css_class}
+  end
+  
+  def toggleable()
+    showAll = (toggle_state == "no" ? "yes" : "no")
+    title = (toggle_state == "yes" ? "Hide extra columns" : "Show all columns")
+    link_to title, {:sort => sort_column, :direction => sort_direction, :showAll => showAll}
   end
 end

@@ -9,7 +9,7 @@
       <% unless @user.datasets.empty? %>
         <div class="datasetTable" style = "overflow-x:auto">  
           <table class="datasets" summary="User datasets">
-           <%= render '/shared/dataset_headers' %>
+            <%= render '/shared/dataset_headers' %>
             <%= render @datasets %>
           </table>
         </div>

@@ -1,16 +1,16 @@
 <tr>
   <th><%= sortable "jobid", "Job ID" %></th>
-  <th>Person</th>
-  <% if @showAll %> 
-    <th>Sample</th>
-    <th>Replicate</th>
+  <th><%= sortable "person" %></th>
+  <% if @showAll == "yes" %> 
+    <th><%= sortable "sample" %></th>
+    <th><%= sortable "replicate" %></th>
           
-    <th>Cell Type</th>
-    <th>Factor</th>
+    <th><%= sortable "celltype", "Cell Type" %></th>
+    <th><%= sortable "factor" %></th>
           
-    <th>Reads</th>
-    <th>Mapped</th>
-    <th>Unmapped</th>
+    <th><%= sortable "reads" %></th>
+    <th><%= sortable "mapped" %></th>
+    <th><%= sortable "unmapped" %></th>
     <th>Avg CPL</th>
     <th>Med CPL</th>
     <th>Min CPL</th>

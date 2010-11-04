@@ -22,7 +22,7 @@
 class Dataset < ActiveRecord::Base
   attr_accessible :jobid, :user_id, :person, :sample, :replicate, :cellType, :factor, :numReads, :mappedReads, :unmappedReads, :averageCPL, :medianCPL, :minCPL, :maxCPL, :aligner, :system, :alignParams, :refGenome, :files, :sequencer, :barcode, :dateDone, :dateRec, :lanes, :comments, :otherInfo
   
-  #belongs_to :user
+  belongs_to :user
   
   validates :jobid,   :presence => true,
                       :uniqueness => { :case_sensitive => false}
