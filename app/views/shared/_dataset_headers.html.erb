@@ -5,30 +5,34 @@
     <th><%= sortable "sample" %></th>
     <th><%= sortable "replicate" %></th>
           
-    <th><%= sortable "celltype", "Cell Type" %></th>
+    <th><%= sortable "cellType", "Cell Type" %></th>
     <th><%= sortable "factor" %></th>
           
-    <th><%= sortable "reads" %></th>
-    <th><%= sortable "mapped" %></th>
-    <th><%= sortable "unmapped" %></th>
-    <th>Avg CPL</th>
-    <th>Med CPL</th>
-    <th>Min CPL</th>
-    <th>Max CPL</th>
+    <th><%= sortable "numReads", "Total Reads" %></th>
+    <th><%= sortable "mappedReads", "Mapped Reads" %></th>
+    <th><%= sortable "unmappedReads", "Unmapped Reads" %></th>
+    <th><%= sortable "Avg CPL", "averageCPL"%></th>
+    <th><%= sortable "Med CPL", "medianCPL"%></th>
+    <th><%= sortable "Min CPL", "minCPL"%></th>
+    <th><%= sortable "Max CPL", "maxCPL"%></th>
           
-    <th>Aligner</th>
-    <th>System</th>
-    <th>Params</th>
-    <th>Ref</th>
-    <th>Files</th>
+    <th><%= sortable "aligner"%></th>
+    <th><%= sortable "system"%></th>
+    <th><%= sortable "Params", "alignParams"%></th>
+    <th><%= sortable "Ref", "refGenome"%></th>
+    <th><%= sortable "files"%></th>
           
-    <th>Sequencer</th>
-    <th>Barcode</th>
-    <th>Done</th>
-    <th>Received</th>
-    <th>Lanes</th>
+    <th><%= sortable "sequencer"%></th>
+    <th><%= sortable "barcode"%></th>
+  <% end %>
+  
+  <th><%= sortable "Done", "dateDone"%></th>
+  <th><%= sortable "Received", "dateRec"%></th>
+  
+  <% if @showAll == "yes" %>
+    <th><%= sortable "Lanes"%></th>
           
-    <th>Comments</th>
-    <th>Other</th>
+    <th><%= sortable "Comments"%></th>
+    <th><%= sortable "Other", "otherInfo"%></th>
   <% end %>
 </tr>

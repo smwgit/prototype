@@ -14,6 +14,7 @@ body {
 
 header {
     padding-top: 20px;
+    color: #997171;
 }
 
 header img {
@@ -263,7 +264,7 @@ div.datasetTable {
 }
 
 .datasetTable th .current {
-    padding-right: 30px;
+    padding-right: 15px;
     background-repeat: no-repeat;
     background-position: right center;
 }

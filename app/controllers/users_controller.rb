@@ -79,6 +79,6 @@ class UsersController < ApplicationController
     end
     
     def toggle_state
-      %w[true false].include?(params[:showAll]) ? params[:showAll] : false
+      %w[yes no].include?(params[:showAll]) ? params[:showAll] : "no"
     end
 end

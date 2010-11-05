@@ -60,12 +60,16 @@
     <td class="dataset"
       <span class="stuff"><%= dataset.barcode %> </span>
     </td>
-    <td class="dataset"
-      <span class="stuff"><%= dataset.dateDone %> </span>
-    </td>
-    <td class="dataset"
-      <span class="stuff"><%= dataset.dateRec %> </span>
-    </td>
+  <% end %>
+  
+  <td class="dataset"
+     <span class="stuff"><%= dataset.dateDone %> </span>
+  </td>
+  <td class="dataset"
+    <span class="stuff"><%= dataset.dateRec %> </span>
+  </td>
+  
+  <% if @showAll == "yes" %>
     <td class="dataset"
       <span class="stuff"><%= dataset.lanes %> </span>
     </td>
