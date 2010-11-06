@@ -1,6 +1,4 @@
 class DatasetsController < ApplicationController
-  before_filter :authenticate, :only => [:create, :destroy]
-  before_filter :authorized_user, :only => :destroy
   helper_method :sort_column, :sort_direction, :toggle_state
 
   def create
