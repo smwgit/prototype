@@ -26,6 +26,7 @@ class DatasetsController < ApplicationController
   end
   
   def edit
+    @dataset = Dataset.find(params[:id])
     @title = "Edit dataset"
   end
   

@@ -7,3 +7,13 @@
     }
   </style>
 <% end %>
+
+<% if current_user.background == "green" %> 
+  <style>
+    body {
+      background: #dbd1d1;
+      background-image: url(/images/background-green.png);
+      background-repeat: repeat-x;
+    }
+  </style>
+<% end %>

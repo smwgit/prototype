@@ -3,8 +3,11 @@
     <td class="main">
       <h1>
         <%= gravatar_for @user %>
-        <%= @user.name %> (<%= link_to user_path(@user), @user %>): <%= @user.datasets.count %> datasets
+        <%= @user.name %>: <%= @user.datasets.count %> datasets
       </h1>
+      <p>
+        <%= @user.blurb %>
+      </p>
       <% unless @user.datasets.empty? %>
         <div class="datasetTable" style = "overflow-x:auto">  
           <table class="profile" summary="User datasets">

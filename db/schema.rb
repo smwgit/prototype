@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101106144303) do
+ActiveRecord::Schema.define(:version => 20101106180356) do
 
   create_table "datasets", :force => true do |t|
     t.string   "jobid"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(:version => 20101106144303) do
     t.string   "salt"
     t.boolean  "admin",              :default => false
     t.string   "background"
+    t.text     "blurb"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

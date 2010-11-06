@@ -3,7 +3,6 @@ Prototype::Application.routes.draw do
 
   resources :users, :datasets
   resources :sessions, :only => [:new, :create, :destroy]
-  resources :datasets, :only => [:create, :destroy]
   
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
