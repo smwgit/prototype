@@ -15,3 +15,8 @@
   <%= f.label :password_confirmation, "Confirmation" %><br />
   <%= f.password_field :password_confirmation %>
 </div>
+<div class="field">
+  <%= f.label :background, "Background Color" %><br />
+  <%= radio_button("user", "background", "blue", :checked => true)%> Blue <br/>
+  <%= radio_button("user", "background", "orange") %> Orange <br/>
+</div>

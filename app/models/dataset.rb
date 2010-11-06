@@ -1,22 +1,38 @@
 # == Schema Information
-# Schema version: 20101008151015
+# Schema version: 20101106143845
 #
 # Table name: datasets
 #
-#  id         :integer         not null, primary key
-#  celltype   :string(255)
-#  factor     :string(255)
-#  replicate  :string(255)
-#  user       :string(255)
-#  notes      :text
-#  date       :date
-#  barcode    :string(255)
-#  other      :string(255)
-#  sequencer  :string(255)
-#  lanes      :decimal(, )
-#  files      :string(255)
-#  created_at :datetime
-#  updated_at :datetime
+#  id            :integer         not null, primary key
+#  jobid         :string(255)
+#  user_id       :integer
+#  person        :string(255)
+#  sample        :string(255)
+#  replicate     :string(255)
+#  cellType      :string(255)
+#  factor        :string(255)
+#  numReads      :integer
+#  mappedReads   :integer
+#  unmappedReads :integer
+#  averageCPL    :decimal(, )
+#  medianCPL     :decimal(, )
+#  minCPL        :decimal(, )
+#  maxCPL        :decimal(, )
+#  aligner       :string(255)
+#  system        :string(255)
+#  alignParams   :string(255)
+#  refGenome     :string(255)
+#  files         :text
+#  filesURL      :text
+#  sequencer     :string(255)
+#  barcode       :string(255)
+#  dateDone      :date
+#  dateRec       :date
+#  lanes         :decimal(, )
+#  comments      :text
+#  otherInfo     :string(255)
+#  created_at    :datetime
+#  updated_at    :datetime
 #
 
 class Dataset < ActiveRecord::Base

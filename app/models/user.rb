@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20101004210754
+# Schema version: 20101106144303
 #
 # Table name: users
 #
@@ -11,11 +11,12 @@
 #  encrypted_password :string(255)
 #  salt               :string(255)
 #  admin              :boolean
+#  background         :string(255)
 #
 
 class User < ActiveRecord::Base
   attr_accessor :password
-  attr_accessible :name, :email, :password, :password_confirmation
+  attr_accessible :name, :email, :password, :password_confirmation, :background
   
   has_many :datasets, :dependent => :destroy
   
