@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(:version => 20101008151015) do
 
   create_table "datasets", :force => true do |t|
+    t.string   "jobid"
     t.integer  "user_id"
     t.string   "person"
     t.string   "sample"
@@ -31,12 +32,12 @@ ActiveRecord::Schema.define(:version => 20101008151015) do
     t.string   "alignParams"
     t.string   "refGenome"
     t.text     "files"
+    t.text     "filesURL"
     t.string   "sequencer"
-    t.string   "jobid"
     t.string   "barcode"
     t.date     "dateDone"
     t.date     "dateRec"
-    t.string   "lanes"
+    t.decimal  "lanes"
     t.text     "comments"
     t.string   "otherInfo"
     t.datetime "created_at"

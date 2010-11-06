@@ -1,5 +1,10 @@
+<p>
+  <strong><%= link_to "New Dataset", root_path %></strong></br>
+  <%= toggleable %>
+</p>
+
 <tr>
-  <th><%= sortable "jobid", "Job ID" %></th>
+  <th><%= sortable "jobid", "Sample" %></th>
   <th><%= sortable "person" %></th>
   <% if @showAll == "yes" %> 
     <th><%= sortable "sample" %></th>
@@ -11,28 +16,29 @@
     <th><%= sortable "numReads", "Total Reads" %></th>
     <th><%= sortable "mappedReads", "Mapped Reads" %></th>
     <th><%= sortable "unmappedReads", "Unmapped Reads" %></th>
-    <th><%= sortable "Avg CPL", "averageCPL"%></th>
-    <th><%= sortable "Med CPL", "medianCPL"%></th>
-    <th><%= sortable "Min CPL", "minCPL"%></th>
-    <th><%= sortable "Max CPL", "maxCPL"%></th>
+    <th><%= sortable "averageCPL", "Avg CPL"%></th>
+    <th><%= sortable "medianCPL", "Med CPL"%></th>
+    <th><%= sortable "minCPL", "Min CPL"%></th>
+    <th><%= sortable "maxCPL", "Max CPL"%></th>
           
     <th><%= sortable "aligner"%></th>
     <th><%= sortable "system"%></th>
-    <th><%= sortable "Params", "alignParams"%></th>
-    <th><%= sortable "Ref", "refGenome"%></th>
+    <th><%= sortable "alignParams", "Params"%></th>
+    <th><%= sortable "refGenome", "Ref"%></th>
     <th><%= sortable "files"%></th>
+    <th><%= sortable "Files URL", "filesURL"%></th>
           
     <th><%= sortable "sequencer"%></th>
     <th><%= sortable "barcode"%></th>
   <% end %>
   
-  <th><%= sortable "Done", "dateDone"%></th>
-  <th><%= sortable "Received", "dateRec"%></th>
+  <th><%= sortable "dateDone", "Done"%></th>
+  <th><%= sortable "dateRec", "Received"%></th>
   
   <% if @showAll == "yes" %>
     <th><%= sortable "Lanes"%></th>
           
     <th><%= sortable "Comments"%></th>
-    <th><%= sortable "Other", "otherInfo"%></th>
+    <th><%= sortable "otherInfo", "Other"%></th>
   <% end %>
 </tr>

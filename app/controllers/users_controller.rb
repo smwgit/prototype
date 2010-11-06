@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_filter :authenticate, :only => [:index, :edit, :update, :destroy]
   before_filter :correct_user, :only => [:edit, :update]
   before_filter :admin_user,   :only => :destroy
-  helper_method :sort_column, :sort_direction
+  helper_method :sort_column, :sort_direction, :toggle_state
 
   def index
     @title = "All users"
@@ -38,7 +38,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
-      flash[:success] = "Profile updated."
+      flash[:success] = "Profile updated!"
       redirect_to @user
     else
       @title = "Edit user"
@@ -54,7 +54,7 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
-    @datasets = Dataset.order(sort_column + " " + sort_direction)
+    @datasets = @user.datasets.order(sort_column + " " + sort_direction)
     #@datasets = @user.datasets.paginate(:page => params[:page])
     @title = @user.name
   end

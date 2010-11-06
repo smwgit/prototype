@@ -22,7 +22,7 @@ module ApplicationHelper
   
   def toggleable()
     showAll = (toggle_state == "no" ? "yes" : "no")
-    title = (toggle_state == "yes" ? "Hide extra columns" : "Show all columns")
-    link_to title, {:sort => sort_column, :direction => sort_direction, :showAll => showAll}
+    text = (toggle_state == "yes" ? "Hide extra columns" : "Show all columns")
+    link_to text, {:sort => sort_column, :direction => sort_direction, :showAll => showAll}
   end
 end

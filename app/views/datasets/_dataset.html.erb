@@ -55,6 +55,9 @@
       <span class="stuff"><%= dataset.files %> </span>
     </td>
     <td class="dataset"
+      <span class="stuff"><%= dataset.filesURL %> </span>
+    </td>
+    <td class="dataset"
       <span class="stuff"><%= dataset.sequencer %> </span>
     </td>
     <td class="dataset"
@@ -80,6 +83,10 @@
       <span class="stuff"><%= dataset.otherInfo %> </span>
     </td>
   <% end %>
+  <td>
+    <%= link_to "edit", edit_dataset_path(dataset), :method => :edit,
+                                     :title => dataset.jobid %>
+  </td>
   <td>
     <%= link_to "delete", dataset, :method => :delete,
                                      :confirm => "Are you sure?",

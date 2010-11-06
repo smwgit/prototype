@@ -23,6 +23,7 @@ class CreateDatasets < ActiveRecord::Migration
       t.string :alignParams
       t.string :refGenome
       t.text :files
+      t.text :filesURL
       
       t.string :sequencer
       t.string :barcode

@@ -22,7 +22,7 @@ class DatasetsController < ApplicationController
   def show
     @dataset = Dataset.find(params[:id])
     @title = @dataset.id
-    @showAll = true;
+    @showAll = toggle_state;
   end
   
   def edit
@@ -34,6 +34,17 @@ class DatasetsController < ApplicationController
     #@datasets = Dataset.paginate(:page => params[:page])
     @datasets = Dataset.order(sort_column + " " + sort_direction)
     @showAll = toggle_state;
+  end
+  
+  def update
+    @dataset = Dataset.find(params[:id])
+    if @dataset.update_attributes(params[:dataset])
+      flash[:success] = "Dataset updated!"
+      redirect_to @dataset
+    else
+      @title = "Edit dataset"
+      render 'edit'
+    end
   end
   
   private

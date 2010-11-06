@@ -1,0 +1,8 @@
+<h1>Edit dataset</h1>
+
+<%= form_for(@dataset) do |f| %>
+  <%= render '/shared/dataset_form', :f => f %>
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>

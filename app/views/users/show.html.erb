@@ -5,12 +5,11 @@
         <%= gravatar_for @user %>
         <%= @user.name %> (<%= link_to user_path(@user), @user %>): <%= @user.datasets.count %> datasets
       </h1>
-      
       <% unless @user.datasets.empty? %>
         <div class="datasetTable" style = "overflow-x:auto">  
-          <table class="datasets" summary="User datasets">
+          <table class="profile" summary="User datasets">
             <%= render '/shared/dataset_headers' %>
-            <%= render @datasets %>
+            <%= render @user.datasets %>
           </table>
         </div>
       <% end %>

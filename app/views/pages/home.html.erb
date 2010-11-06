@@ -4,7 +4,15 @@
       <td class="main">
         <h1 class="dataset">Enter a new dataset:</h1>
         <br />
-        <%= render 'shared/dataset_form' %>
+
+        <%= form_for(@dataset) do |f| %>
+          <%= render '/shared/dataset_form', :f => f %>
+          <div class = "actions">
+            <%= f.submit "Submit" %>
+          </div>
+        <% end %>
+
+        
       </td>
       <td class="sidebar round">
         <%= render 'shared/user_info' %>
