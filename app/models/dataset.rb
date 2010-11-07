@@ -48,7 +48,7 @@ class Dataset < ActiveRecord::Base
   
   def self.search(search)
     if search
-      find(:all, :conditions => ['jobid LIKE ?', "%#{search}%"])
+      find(:all, :conditions => ['comments LIKE ?', "%#{search}%"])
     else
       find(:all)
     end    

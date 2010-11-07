@@ -33,7 +33,7 @@ class DatasetsController < ApplicationController
   def index
     @title = "All datasets"
     #@datasets = Dataset.paginate(:page => params[:page])
-    @datasets = Dataset.search(params[:search])#.order(sort_column + " " + sort_direction)
+    @datasets = Dataset.order(sort_column + " " + sort_direction).search(params[:search])
     @showAll = toggle_state;
   end
   
