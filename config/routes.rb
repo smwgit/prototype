@@ -1,7 +1,10 @@
 Prototype::Application.routes.draw do
   get "sessions/new"
 
-  resources :users, :datasets
+  resources :users
+  resources :datasets do
+    get :duplicate, :on => :member
+  end
   resources :sessions, :only => [:new, :create, :destroy]
   
   match '/contact', :to => 'pages#contact'

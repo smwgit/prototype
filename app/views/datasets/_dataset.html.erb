@@ -86,7 +86,11 @@
   
   <td>
     <%= link_to "edit", edit_dataset_path(dataset)%>
-
+  </td>
+  <td>
+    <%= link_to "duplicate", duplicate_dataset_path(dataset)%>
+  </td>
+  <td>
     <%= link_to "delete", dataset, :method => :delete,
                                      :confirm => "Are you sure?",
                                      :title => dataset.jobid %>
