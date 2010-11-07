@@ -2,7 +2,6 @@
   <%= link_to logo, root_path %>
   <nav class="round">
     <ul>
-      <li><%#-= link_to "Home", root_path %></li>
       <% if signed_in? %>
         <li><strong><%= link_to current_user.name, current_user %></strong></li>
         <li><strong>|</strong></li>

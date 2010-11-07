@@ -1,4 +1,5 @@
 class DatasetsController < ApplicationController
+  before_filter :authenticate, :only => [:index, :edit, :update, :destroy]
   helper_method :sort_column, :sort_direction, :toggle_state
 
   def create
@@ -13,8 +14,9 @@ class DatasetsController < ApplicationController
   end
 
   def destroy
-    @dataset.destroy
-    redirect_back_or root_path
+    Dataset.find(params[:id]).destroy
+    flash[:success] = "Dataset deleted."
+    redirect_to :back
   end
   
   def show
@@ -31,7 +33,7 @@ class DatasetsController < ApplicationController
   def index
     @title = "All datasets"
     #@datasets = Dataset.paginate(:page => params[:page])
-    @datasets = Dataset.order(sort_column + " " + sort_direction)
+    @datasets = Dataset.paginate(order(sort_column + " " + sort_direction))
     @showAll = toggle_state;
   end
   
@@ -49,7 +51,6 @@ class DatasetsController < ApplicationController
   private
 
     def authorized_user
-      #@dataset = Dataset.find(params[:id])
       @dataset = Dataset.find(params[:id])
       redirect_to dataset_path unless current_user?(@dataset.user)
     end

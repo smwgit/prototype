@@ -83,10 +83,10 @@
       <span class="stuff"><%= dataset.otherInfo %> </span>
     </td>
   <% end %>
+  
   <td>
     <%= link_to "edit", edit_dataset_path(dataset)%>
-  </td>
-  <td>
+
     <%= link_to "delete", dataset, :method => :delete,
                                      :confirm => "Are you sure?",
                                      :title => dataset.jobid %>
