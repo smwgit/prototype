@@ -49,14 +49,14 @@ class DatasetsController < ApplicationController
   end
   
   def duplicate
-    @copy_from = Dataset.find(params[:id])
-    @newdataset = Dataset.new(@copy_from.attributes)  
+    @dataset = Dataset.find(params[:id])
+    @newdataset = Dataset.new(@dataset.attributes)  
     @newdataset.jobid = @newdataset.jobid + " copy"
     @newdataset.save
     if @newdataset.save
         #redirect_to :action => 'list'
       flash[:success] = "Dataset duplicated!"
-      redirect_to datasets_path
+      redirect_to edit_dataset_path(@newdataset)
     end
   end
   
