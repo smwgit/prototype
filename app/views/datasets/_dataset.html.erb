@@ -1,6 +1,6 @@
 <tr>
   <td class="dataset"
-    <span class="stuff" ><%= link_to dataset.jobid, dataset %> </span>
+    <span class="stuff" ><%= link_to dataset.jobid, {:controller => "datasets", :action => "show", :id => dataset.id, :sort => sort_column, :direction => sort_direction, :showAll => toggle_state} %> </span>
   </td>
   <td class="dataset"
     <span class="stuff" ><%= dataset.person %> </span>

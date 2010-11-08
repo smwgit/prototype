@@ -13,7 +13,7 @@
         <div class="datasetTable" style = "overflow-x:auto">  
           <table class="profile" summary="User datasets">
             <%= render '/shared/dataset_headers' %>
-            <%= render @user.datasets %>
+            <%= render @user.datasets.order(sort_column + " " + sort_direction).search(params[:search]) %>
           </table>
         </div>
       <% end %>

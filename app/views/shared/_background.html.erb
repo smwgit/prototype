@@ -17,3 +17,13 @@
     }
   </style>
 <% end %>
+
+<% if current_user.background == "watermelon" %> 
+  <style>
+    body {
+      background: #93f85f;
+      background-image: url(/images/background-watermelon.png);
+      background-repeat: repeat-x;
+    }
+  </style>
+<% end %>
