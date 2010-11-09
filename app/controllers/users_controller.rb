@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_filter :authenticate, :only => [:index, :edit, :update, :destroy]
   before_filter :correct_user, :only => [:edit, :update]
   before_filter :admin_user,   :only => :destroy
-  helper_method :sort_column, :sort_direction, :toggle_state
+
 
   def index
     @title = "All users"
@@ -69,16 +69,5 @@ class UsersController < ApplicationController
     def admin_user
       redirect_to(root_path) unless current_user.admin?
     end
-    
-    def sort_column
-      Dataset.column_names.include?(params[:sort]) ? params[:sort] : "created_at"
-    end
-    
-    def sort_direction
-      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
-    end
-    
-    def toggle_state
-      %w[yes no].include?(params[:showAll]) ? params[:showAll] : "no"
-    end
+
 end
