@@ -10,13 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101106180356) do
+ActiveRecord::Schema.define(:version => 20101110201535) do
 
   create_table "datasets", :force => true do |t|
     t.string   "jobid"
     t.integer  "user_id"
     t.string   "person"
-    t.string   "sample"
+    t.string   "conditions"
     t.string   "replicate"
     t.string   "cellType"
     t.string   "factor"
