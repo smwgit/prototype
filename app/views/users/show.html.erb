@@ -9,6 +9,9 @@
         <%= @user.blurb %>
       </p>
       <hr>
+      <p>
+        <strong><%= link_to "New Dataset", root_path %></strong></br>
+      </p>
       <% unless @user.datasets.empty? %>
         <div class="datasetTable" style = "overflow-x:auto">  
           <table class="profile" summary="User datasets">
