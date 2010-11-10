@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101110201535) do
+ActiveRecord::Schema.define(:version => 20101110205939) do
 
   create_table "datasets", :force => true do |t|
     t.string   "jobid"
@@ -20,9 +20,9 @@ ActiveRecord::Schema.define(:version => 20101110201535) do
     t.string   "replicate"
     t.string   "cellType"
     t.string   "factor"
-    t.integer  "numReads"
-    t.integer  "mappedReads"
-    t.integer  "unmappedReads"
+    t.decimal  "numReads"
+    t.decimal  "mappedReads"
+    t.decimal  "unmappedReads"
     t.decimal  "averageCPL"
     t.decimal  "medianCPL"
     t.decimal  "minCPL"
@@ -47,24 +47,24 @@ ActiveRecord::Schema.define(:version => 20101110201535) do
   add_index "datasets", ["user_id"], :name => "index_datasets_on_user_id"
 
   create_table "microposts", :force => true do |t|
-    t.string   "content"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "content"
+    t.integer   "user_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   add_index "microposts", ["user_id"], :name => "index_microposts_on_user_id"
 
   create_table "users", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "encrypted_password"
-    t.string   "salt"
-    t.boolean  "admin",              :default => false
-    t.string   "background"
-    t.text     "blurb"
+    t.string    "name"
+    t.string    "email"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "encrypted_password"
+    t.string    "salt"
+    t.boolean   "admin",              :default => false
+    t.string    "background"
+    t.text      "blurb"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

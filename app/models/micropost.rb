@@ -1,13 +1,13 @@
 # == Schema Information
-# Schema version: 20101004210754
+# Schema version: 20101110201535
 #
 # Table name: microposts
 #
-#  id         :integer         not null, primary key
+#  id         :integer         primary key
 #  content    :string(255)
 #  user_id    :integer
-#  created_at :datetime
-#  updated_at :datetime
+#  created_at :timestamp
+#  updated_at :timestamp
 #
 
 class Micropost < ActiveRecord::Base

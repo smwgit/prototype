@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20101106143845
+# Schema version: 20101110205939
 #
 # Table name: datasets
 #
@@ -7,13 +7,13 @@
 #  jobid         :string(255)
 #  user_id       :integer
 #  person        :string(255)
-#  sample        :string(255)
+#  conditions    :string(255)
 #  replicate     :string(255)
 #  cellType      :string(255)
 #  factor        :string(255)
-#  numReads      :integer
-#  mappedReads   :integer
-#  unmappedReads :integer
+#  numReads      :decimal(, )
+#  mappedReads   :decimal(, )
+#  unmappedReads :decimal(, )
 #  averageCPL    :decimal(, )
 #  medianCPL     :decimal(, )
 #  minCPL        :decimal(, )
