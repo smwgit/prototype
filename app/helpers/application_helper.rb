@@ -10,7 +10,7 @@ module ApplicationHelper
   end
   
   def logo
-    image_tag("longhorn-sequence-100px.png", :alt => "The Longhorn Sequencing Database", :class => "round")
+    image_tag("longhorn-sequence-sm.png", :alt => "The Longhorn Sequencing Database", :class => "round")
   end
   
   def sortable(column, title = nil)
