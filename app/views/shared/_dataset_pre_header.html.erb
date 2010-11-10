@@ -1,16 +1,2 @@
-<table>
-  <tr>
-    <td>
-      <strong><%= link_to "New Dataset", root_path %></strong></br>
-      <%= toggleable %>
-    </td>
-    <td align="right">
-      <% form_tag datasets_path, :method => 'get' do %>
-        <p>
-          <%= text_field_tag :search, params[:search] %>
-          <%= submit_tag "Search comments", :name => nil%>
-        </p>
-      <% end %>
-    </td>
-  </tr>
-</table>
+<strong><%= link_to "New Dataset", root_path %></strong></br>
+<%= toggleable %>

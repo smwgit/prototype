@@ -1,10 +1,24 @@
 <h1> All datasets </h1>
-<ul>
-  <%= render '/shared/dataset_pre_header' %>
+<p>
+  <table>
+    <tr>
+      <td>
+        <%= render '/shared/dataset_pre_header' %>
+      </td>
+      <td align="right">
+        <% form_tag datasets_path, :method => 'get' do %>
+          <p>
+            <%= text_field_tag :search, params[:search] %>
+            <%= submit_tag "Search comments", :name => nil%>
+          </p>
+        <% end %>
+      </td>
+    </tr>
+  </table> 
   <div class="datasetTable" style = "overflow-x:auto">  
   <table class="profile">
     <%= render '/shared/dataset_headers' %>
     <%= render @datasets %>
     </table>
   </div>
-</ul>
+</p>
