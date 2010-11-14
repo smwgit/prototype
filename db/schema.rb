@@ -20,13 +20,13 @@ ActiveRecord::Schema.define(:version => 20101110205939) do
     t.string   "replicate"
     t.string   "cellType"
     t.string   "factor"
-    t.decimal  "numReads"
-    t.decimal  "mappedReads"
-    t.decimal  "unmappedReads"
-    t.decimal  "averageCPL"
-    t.decimal  "medianCPL"
-    t.decimal  "minCPL"
-    t.decimal  "maxCPL"
+    t.decimal  "numReads",      :precision => 10, :scale => 0
+    t.decimal  "mappedReads",   :precision => 10, :scale => 0
+    t.decimal  "unmappedReads", :precision => 10, :scale => 0
+    t.decimal  "averageCPL",    :precision => 10, :scale => 0
+    t.decimal  "medianCPL",     :precision => 10, :scale => 0
+    t.decimal  "minCPL",        :precision => 10, :scale => 0
+    t.decimal  "maxCPL",        :precision => 10, :scale => 0
     t.string   "aligner"
     t.string   "system"
     t.string   "alignParams"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(:version => 20101110205939) do
     t.string   "barcode"
     t.date     "dateDone"
     t.date     "dateRec"
-    t.decimal  "lanes"
+    t.decimal  "lanes",         :precision => 10, :scale => 0
     t.text     "comments"
     t.string   "otherInfo"
     t.datetime "created_at"
@@ -47,24 +47,24 @@ ActiveRecord::Schema.define(:version => 20101110205939) do
   add_index "datasets", ["user_id"], :name => "index_datasets_on_user_id"
 
   create_table "microposts", :force => true do |t|
-    t.string    "content"
-    t.integer   "user_id"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "content"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "microposts", ["user_id"], :name => "index_microposts_on_user_id"
 
   create_table "users", :force => true do |t|
-    t.string    "name"
-    t.string    "email"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.string    "encrypted_password"
-    t.string    "salt"
-    t.boolean   "admin",              :default => false
-    t.string    "background"
-    t.text      "blurb"
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "encrypted_password"
+    t.string   "salt"
+    t.boolean  "admin",              :default => false
+    t.string   "background"
+    t.text     "blurb"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
