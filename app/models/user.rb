@@ -20,6 +20,7 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation, :background, :blurb
   
   has_many :datasets, :dependent => :destroy
+  has_many :messages
   
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   

@@ -36,7 +36,7 @@
 #
 
 class Dataset < ActiveRecord::Base
-  attr_accessible :jobid, :user_id, :person, :conditions, :replicate, :cellType, :factor, :numReads, :mappedReads, :unmappedReads, :averageCPL, :medianCPL, :minCPL, :maxCPL, :aligner, :system, :alignParams, :refGenome, :files, :sequencer, :barcode, :dateDone, :dateRec, :lanes, :comments, :otherInfo, :filesURL
+  attr_accessible :jobid, :person, :conditions, :replicate, :cellType, :factor, :numReads, :mappedReads, :unmappedReads, :averageCPL, :medianCPL, :minCPL, :maxCPL, :aligner, :system, :alignParams, :refGenome, :files, :sequencer, :barcode, :dateDone, :dateRec, :lanes, :comments, :otherInfo, :filesURL
   
   belongs_to :user
   has_many :messages

@@ -277,3 +277,47 @@ div.datasetTable {
 .datasetTable th .desc {
     background-image: url(/images/dn_arrow-sm.png);
 }
+
+h1.message {
+margin-bottom: 0.3em;
+}
+table.messages {
+margin-top: 1em;
+}
+table.messages tr {
+height: 70px;
+}
+table.messages tr td.gravatar {
+border-top: 1px solid #ccc;
+vertical-align: top;
+width: 50px;
+}
+table.messages tr td.message {
+border-top: 1px solid #ccc;
+vertical-align: top;
+padding-top: 10px;
+}
+table.messages tr td.message span.timestamp {
+display: block;
+font-size: 85%;
+color: #666;
+}
+div.user_info img {
+padding-right: 0.1em;
+}
+div.user_info a {
+text-decoration: none;
+}
+div.user_info span.user_name {
+position: absolute;
+}
+div.user_info span.messages {
+font-size: 80%;
+}
+form.new_message {
+margin-bottom: 2em;
+}
+form.new_message textarea {
+height: 4em;
+margin-bottom: 0;
+}

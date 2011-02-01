@@ -20,6 +20,8 @@ class DatasetsController < ApplicationController
   
   def show
     @dataset = Dataset.find(params[:id])
+    @messages = @dataset.messages
+    @message = Message.new
     @title = @dataset.id
     @showAll = toggle_state;
   end

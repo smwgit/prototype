@@ -9,3 +9,22 @@
   </table>
 </div>
 
+<% unless @dataset.messages.empty? %>
+  <table class="datasetTable" summary="Dataset messages">
+    <%= render @messages %>
+  </table>
+<% end %>
+
+<p>
+  <%= form_for @messages do |f| %>
+    <%= render 'shared/error_messages', :comment => f.object %>
+    <div class="field">
+      <%= f.text_area :comment %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Submit" %>
+    </div>
+  <% end %>
+
+</p>
+
